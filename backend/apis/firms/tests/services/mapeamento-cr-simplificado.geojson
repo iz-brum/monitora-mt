@@ -1,0 +1,24 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-55.37507, -14.55484],
+            [-55.37611, -14.55497],
+            [-55.37677, -14.55505],
+            [-55.37881, -14.55483],
+            [-55.37507, -14.55484]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "ÁREA ISOLADA DE ROSÁRIO OESTE 2 / SOBREPOSIÇÃO",
+        "comandoRegional": "CR BM I"
+      }
+    }
+  ]
+}

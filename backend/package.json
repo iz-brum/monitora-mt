@@ -1,0 +1,66 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint **/*.{js,jsx,ts,tsx}",
+    "report:plato": "plato -r -d reports/plato **/*.{js,jsx,ts,tsx}",
+    "dep:cycles": "madge --circular ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/turf": "^7.2.0",
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "globals": "^16.2.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "strip-ansi": "^7.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "@babel/eslint-parser": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
+    "eslint": "^9.27.0",
+    "eslint-plugin-complexity": "^1.0.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "jest": "^29.7.0",
+    "madge": "^8.0.0",
+    "mockdate": "^3.0.5",
+    "nodemon": "^3.1.10",
+    "plato": "^1.7.0"
+  },
+  "imports": {
+    "#backend_utils/*": "./utils/*",
+    
+    "#ana_routes": "./apis/ana/routes/ana.routes.js",
+    "#ana_controllers/*": "./apis/ana/controllers/*",
+    "#ana_services/*": "./apis/ana/services/*",
+
+    "#firms_models": "./apis/firms/models/FireModel.js",
+    "#firms_routes": "./apis/firms/routes/index.js",
+    "#firms_services/*": "./apis/firms/services/*",
+    "#firms_utils/*": "./apis/firms/utils/*",
+
+    "#geo_utils/*": "./apis/geo/utils/*",
+
+    "#mapbox_config/*": "./apis/mapbox/config/*",
+    "#mapbox_services/*": "./apis/mapbox/services/*",
+    "#mapbox_utils/*": "./apis/mapbox/utils/*",
+
+    "#shared_cache_locations/*": "./apis/shared/cache/locations/*"
+  }
+}

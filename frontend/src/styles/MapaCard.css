@@ -1,0 +1,272 @@
+    /* frontemnd/src/styles/MapaCard.css */
+
+    .mapa-card {
+        background-color: #6b8375;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .mapa-leaflet {
+        flex: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .leaflet-left {
+        left: -7px !important;
+        opacity: 0.85;
+    }
+
+    .leaflet-right {
+        right: -7px !important;
+        opacity: 0.85;
+    }
+
+    .leaflet-control-custom {
+        cursor: pointer !important;
+    }
+
+    .leaflet-control-locate {
+        display: block !important;
+        visibility: visible !important;
+        z-index: 1000;
+    }
+
+    .leaflet-top .leaflet-control {
+        margin-top: 3px !important;
+    }
+
+    /* src/styles/LeafletOverrides.css */
+    .leaflet-control-custom {
+        min-width: 33px;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        border-radius: 2px;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .leaflet-control-custom:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* ============== ROTA ============== */
+    .rotas-toggle-btn {
+        width: 30px !important;
+        height: 30px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        cursor: pointer;
+        color: #666;
+    }
+
+    .rotas-toggle-btn.active {
+        background: #2196F3;
+        color: white;
+    }
+
+    .rotas-toggle-btn:hover {
+        background: #f4f4f4;
+    }
+
+    .rotas-toggle-btn.active:hover {
+        background: #1976D2;
+    }
+
+
+
+    .rota-flutuante {
+        position: absolute;
+        background: white;
+        border: 1px solid #aaa;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+        border-radius: 12px;
+        z-index: 1000;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        min-width: 340px;
+        max-width: 550px;
+        min-height: 80px;
+        cursor: default;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .rota-panel-header {
+        background: #f7f7f7;
+        padding: 7px 10px 7px 14px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        user-select: none;
+        cursor: move;
+    }
+
+    .rota-panel-header h3 {
+        margin: 0;
+        font-size: 16px;
+        color: #444;
+    }
+
+    .clear-route-btn {
+        background: #f44336;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background 0.18s;
+    }
+
+    .clear-route-btn:hover {
+        background: #d32f2f;
+    }
+
+    /* Labels para distância/tempo */
+    .route-details {
+        display: flex;
+        gap: 18px;
+        padding: 10px 14px 0 14px;
+    }
+
+    .route-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #888;
+        margin-right: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .route-value {
+        font-size: 15px;
+        font-weight: 500;
+        color: #222;
+    }
+
+    /* Alternativas de rota (igual antes) */
+    .route-alternatives {
+        margin: 8px 0 0 0;
+        padding: 10px 14px 0 14px;
+        border-top: 1px solid #ececec;
+    }
+
+    .route-alternatives h4 {
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .route-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .route-btn {
+        padding: 6px 14px;
+        border: 1px solid #2196F3;
+        border-radius: 5px;
+        background: white;
+        color: #2196F3;
+        cursor: pointer;
+        font-size: 12px;
+        transition: background 0.18s;
+    }
+
+    .route-btn:hover {
+        background: #e3f2fd;
+    }
+
+    .route-btn.active {
+        background: #2196F3;
+        color: white;
+    }
+
+    /* Zebra list para instruções */
+    .routing-container-embed .leaflet-routing-alt {
+        margin: 18px 0 0 0 !important;
+        border-radius: 0 0 8px 8px;
+        box-shadow: none !important;
+        padding: 0 0 16px 0;
+    }
+
+    .routing-container-embed .leaflet-routing-alt table tr:nth-child(even),
+    .routing-container-embed .leaflet-routing-alt li:nth-child(even) {
+        background: #f9fafd;
+    }
+
+    .routing-container-embed .leaflet-routing-alt table tr:nth-child(odd),
+    .routing-container-embed .leaflet-routing-alt li:nth-child(odd) {
+        background: #fff;
+    }
+
+    .routing-container-embed .leaflet-routing-alt {
+        font-size: 15px !important;
+    }
+
+    .routing-container-embed .leaflet-routing-alt td,
+    .routing-container-embed .leaflet-routing-alt th {
+        padding: 4px 10px !important;
+    }
+
+
+    .leaflet-routing-alt-minimized {
+        max-height: 15px !important;
+    }
+
+    /* Esconde o título e resumo de distância/tempo do LRM dentro do painel flutuante */
+    .routing-container-embed .leaflet-routing-alt h3 {
+        display: none !important;
+    }
+
+    .routing-container-embed .leaflet-routing-alt h2 {
+        padding-left: 15px;
+        margin: 0px;
+    }
+
+    /* Deixe a tabela do LRM ocupar todo o espaço do painel */
+    .routing-container-embed table {
+        width: 100% !important;
+        table-layout: fixed;
+    }
+
+    /* Última coluna (distância) sempre 50px */
+    .routing-container-embed col.leaflet-routing-instruction-distance {
+        width: 90px !important;
+    }
+
+    /* Força o td da distância a respeitar o tamanho, sem quebra */
+    .routing-container-embed td.leaflet-routing-instruction-distance {
+        width: 50px !important;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Garante que as outras colunas preencham o resto */
+    .routing-container-embed col.leaflet-routing-instruction-icon {
+        width: 36px !important; /* Ícone */
+    }
+    .routing-container-embed col.leaflet-routing-instruction-text {
+        width: auto;
+    }

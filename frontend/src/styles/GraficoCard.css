@@ -1,0 +1,32 @@
+/* Estilos base */
+.grafico-card {
+    background-color: #5a6670;
+    padding: 0.45rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.grafico-titulo {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grafico-conteudo {
+    height: calc(100% - 25px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Variações por tipo de gráfico */
+.grafico-card.tipo-chuva {
+    background: linear-gradient(180deg, #09139b, #057cb8fb);
+}
+
+.grafico-card.tipo-focos {
+    background: linear-gradient(180deg, #c00e31, #d6540a);
+}

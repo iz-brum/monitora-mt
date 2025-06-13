@@ -1,0 +1,56 @@
+# Logs
+logs                   
+# Pasta logs na raiz
+*.log                  
+# Todos os arquivos terminados com .log
+npm-debug.log*         
+# Logs de debug do npm
+yarn-debug.log*        
+# Logs de debug do yarn
+yarn-error.log*        
+# Logs de erro do yarn
+pnpm-debug.log*        
+# Logs de debug do pnpm
+lerna-debug.log*       
+# Logs de debug do lerna
+
+node_modules           
+# Dependências (Node.js)
+dist                   
+# Pasta de build padrão (frontend, por exemplo)
+dist-ssr               
+# Pasta de build para Server Side Rendering
+*.local                
+# Qualquer arquivo terminando com .local
+
+# Editor directories and files
+.vscode/*              
+# Configurações do VSCode (exceto extensions.json)
+!.vscode/extensions.json 
+# Permite versionar apenas o extensions.json do VSCode
+.idea                  
+# Configurações do JetBrains/IntelliJ/WebStorm
+.DS_Store              
+# Arquivo oculto do macOS
+*.suo                  
+# Arquivo de configuração de solução do Visual Studio
+*.ntvs*                
+# Arquivo do Node.js Tools para Visual Studio
+*.njsproj              
+# Projeto Node.js para Visual Studio
+*.sln                  
+# Solução do Visual Studio
+*.sw?                  
+# Arquivo swap de editores (ex: .swp, .swo)
+
+# Ferramentas binárias
+tools/*.exe            
+# Executáveis Windows na pasta tools/
+tools/*.dll            
+# Bibliotecas dinâmicas do Windows na pasta tools/
+
+# Ignore environment variables files
+.env                   
+# Arquivo de variáveis de ambiente padrão
+.env.*                 
+# Todos os arquivos de variáveis de ambiente com sufixo (ex: .env.local, .env.production)

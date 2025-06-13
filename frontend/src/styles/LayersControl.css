@@ -1,0 +1,253 @@
+/* ================================
+   1) BASELAYERS CONTROL (todos)
+   ================================ */
+
+/* container fechado */
+.leaflet-control-layers.leaflet-control {
+  width: 35px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: width .55s ease !important;
+  /* Removida transição de opacity */
+  padding: 0;
+  /* Garante padding inicial zerado */
+}
+
+/* botão “Layers” (ícone genérico) – apenas width/height, sem mexer em margin/flex */
+.leaflet-control-layers-toggle {
+  width: 35px !important;
+  height: 35px !important;
+  background-size: 25px 25px !important;
+}
+
+/* container aberto (hover em qualquer base-layers) */
+.leaflet-control-layers.leaflet-control:hover {
+  width: 250px !important;
+  /* Largura fixa igual ao focos-layer-control */
+  opacity: 1;
+  padding: 10px;
+  /* Adiciona padding interno ao expandir */
+}
+
+/* faz fade-in na lista interna ao expandir */
+.leaflet-control-layers-list {
+  opacity: 1 !important;
+  /* Mantém visível */
+  transition: opacity .55s ease;
+}
+
+.leaflet-control-layers.leaflet-control:hover .leaflet-control-layers-list {
+  opacity: 1;
+}
+
+/* ==============================
+   Estilo para os itens da lista
+   ============================== */
+
+/* Container de cada opção (radio/checkbox + texto) */
+.leaflet-control-layers-list label {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  margin: 0;
+  /* sem gaps extras */
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background .25s ease;
+}
+
+.leaflet-control-layers-list label:hover {
+  background: #f0f8ff;
+  border-radius: 4px;
+}
+
+/* Radio / checkbox modernizado */
+.leaflet-control-layers-list .leaflet-control-layers-selector {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  accent-color: #0078D4;
+  /* ajuste conforme sua paleta */
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.leaflet-control-layers-list .leaflet-control-layers-selector:hover {
+  transform: scale(1.1);
+}
+
+/* Texto após o input */
+.leaflet-control-layers-list label span span {
+  user-select: none;
+}
+
+/* Separator estilizado */
+.leaflet-control-layers-list .leaflet-control-layers-separator {
+  margin: 8px 0;
+  border-top: 1px solid #ddd;
+}
+
+
+/* ================================
+   2) FOCOSLAYERCONTROL (específico)
+   ================================ */
+
+.focos-layer-control.leaflet-control-layers:hover {
+  width: 250px;
+  /* sobescreve o fit-content */
+  padding: 10px;
+}
+
+/* ícone customizado para o botão de focos */
+.leaflet-control.focos-layer-control .leaflet-control-layers-toggle {
+  background-image: url('/src/assets/imgs/iconesPersonalizados/layer_focos_calor.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* cluster marker styling (se for necessário aqui) */
+.my-cluster div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 165, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c00;
+}
+
+.my-cluster span {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ================================
+   ESTILO DO BOTÃO TOGGLE CLUSTER/SIMPLES
+   ================================ */
+
+.toggle-mode {
+  margin-right: 20px !important;
+  /* Novo espaçamento direito */
+  margin-left: 12px !important;
+  /* Aumentei o left para melhor balanceamento */
+  font-size: 14px !important;
+  padding: 5px 10px !important;
+  cursor: pointer !important;
+  border: none !important;
+  border-radius: 5px !important;
+  background: #0078D4 !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle-mode:hover {
+  background: #005a9e !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.toggle-mode:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Efeito de "modo ativo" alternado */
+.toggle-mode:not(.active-cluster) {
+  background: #4CAF50 !important;
+  /* Verde para modo simples */
+}
+
+.toggle-mode:not(.active-cluster):hover {
+  background: #45a049 !important;
+}
+
+.toggle-mode:hover::after {
+  left: 100%;
+}
+
+.leaflet-control-layers-overlays label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: start !important;
+  width: 100%;
+}
+
+/* Ajuste para alinhamento vertical dos spans */
+.leaflet-control-layers-list label>span {
+  display: flex !important;
+  align-items: center !important;
+  flex-grow: 1;
+  /* Ocupa espaço disponível */
+}
+
+/* Alinhamento horizontal para texto dos controles */
+.leaflet-control-layers-list label span span:not(:first-child) {
+  margin-left: 15px;
+  white-space: nowrap;
+  /* Mantém texto em linha única */
+}
+
+/* Garante alinhamento perfeito entre base e overlay */
+.leaflet-control-layers-base label,
+.leaflet-control-layers-overlays label {
+  padding: 8px 12px !important;
+  /* Padding igual para ambos */
+}
+
+/* Ajuste fino para inputs radio/checkbox */
+.leaflet-control-layers-selector {
+  margin-top: -1px !important;
+  /* Corrige offset visual */
+}
+
+/* ================================================= */
+
+/* Ícone customizado para o Layer Control de arquivos importados */
+.leaflet-control.import-layer-control .leaflet-control-layers-toggle {
+  background-image: url('/src/assets/imgs/iconesPersonalizados/layer_import.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Ícone customizado para o Layer Control de camadas base (mapa) */
+.leaflet-control.base-layer-control .leaflet-control-layers-toggle {
+  background-image: url('/src/assets/imgs/iconesPersonalizados/layer_maps.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/*  ==================================================== */
+
+.leaflet-marker-icon {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}

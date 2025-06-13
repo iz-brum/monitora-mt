@@ -1,0 +1,23 @@
+/* src/styles/layout.css */
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    margin-bottom: 0.3rem;
+}
+
+.last-section {
+    margin-bottom: 0;
+}
+
+.app-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30px 190px 2fr 1.5fr;
+}

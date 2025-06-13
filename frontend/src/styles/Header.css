@@ -1,0 +1,24 @@
+/* frontend/src/styles/Header.css */
+
+.header {
+    height: 5vh;
+    max-height: 30px;
+    min-height: 20px;
+    background: linear-gradient(to right, #1e3c72, #2a5298, #7f1d1d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(0.75rem, 1vw, 1.1rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-logo {
+    position: absolute;
+    left: 10px;
+    width: clamp(25px, 2.8vh, 35px);
+    height: clamp(25px, 2.8vh, 35px);
+    object-fit: contain;
+}
