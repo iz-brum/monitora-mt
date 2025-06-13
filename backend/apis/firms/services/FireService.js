@@ -21,7 +21,7 @@ import { parseQuery } from '#firms_utils/parseQuery.js';
  *
  * Serviço para geocodificação de coordenadas e enriquecimento dos dados de focos com informações de localização.
  */
-import MapboxReverseGeocoder from '#mapbox_services/MapboxReverseGeocoder .js';
+import MapboxReverseGeocoder from '#mapbox_services/MapboxReverseGeocoder.js';
 
 import GeoMunicipalityMatcher from '#geo_utils/GeoMunicipalityMatcher.js';
 
