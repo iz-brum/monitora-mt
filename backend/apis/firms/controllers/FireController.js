@@ -25,7 +25,7 @@ import FireService from '#firms_services/FireService.js';
  *
  * Serviço para geocodificação de coordenadas e enriquecimento dos dados de focos com informações de localização.
  */
-import MapboxReverseGeocoder from '#mapbox_services/MapboxReverseGeocoder .js';
+import MapboxReverseGeocoder from '#mapbox_services/MapboxReverseGeocoder.js';
 
 /**
  * 📈 FireStatsService
